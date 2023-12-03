@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:women_safety_app/child/bottom_screens/add_contacts.dart';
-import 'package:women_safety_app/child/bottom_screens/child_home_page.dart';
-import 'package:women_safety_app/child/bottom_screens/profile_page.dart';
+import 'package:go_secure_safe/child/bottom_screens/add_contacts.dart';
+import 'package:go_secure_safe/child/bottom_screens/child_home_page.dart';
+
 
 class BottomPage extends StatefulWidget {
   BottomPage({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class _BottomPageState extends State<BottomPage> {
   List<Widget> pages = [
     HomeScreen(),
     AddContactsPage(),
-    CheckUserStatusBeforeChatOnProfile(),
+
   ];
   onTapped(int index) {
     setState(() {
@@ -41,11 +41,6 @@ class _BottomPageState extends State<BottomPage> {
               label: 'contacts',
               icon: Icon(
                 Icons.contacts,
-              )),
-          BottomNavigationBarItem(
-              label: 'Profile',
-              icon: Icon(
-                Icons.person,
               )),
         ],
       ),

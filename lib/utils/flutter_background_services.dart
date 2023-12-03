@@ -10,8 +10,8 @@ import 'package:geolocator/geolocator.dart';
 import 'package:shake/shake.dart';
 import 'package:telephony/telephony.dart';
 import 'package:vibration/vibration.dart';
-import 'package:women_safety_app/db/db_services.dart';
-import 'package:women_safety_app/model/contactsm.dart';
+import 'package:go_secure_safe/db/db_services.dart';
+import 'package:go_secure_safe/model/contactsm.dart';
 
 sendMessage(String messageBody) async {
   List<TContact> contactList = await DatabaseHelper().getContactList();
@@ -31,8 +31,8 @@ sendMessage(String messageBody) async {
 Future<void> initializeService() async {
   final service = FlutterBackgroundService();
   AndroidNotificationChannel channel = AndroidNotificationChannel(
-    "script academy",
-    "foregrounf service",
+    "GoSecure",
+    "foreground service",
     "used for imp notifcation",
     importance: Importance.high,
   );
@@ -50,8 +50,8 @@ Future<void> initializeService() async {
         onStart: onStart,
         isForegroundMode: true,
         autoStart: true,
-        notificationChannelId: "script academy",
-        initialNotificationTitle: "foregrounf service",
+        notificationChannelId: "GoSecure",
+        initialNotificationTitle: "foreground service",
         initialNotificationContent: "initializing",
         foregroundServiceNotificationId: 888,
       ));
@@ -117,12 +117,12 @@ void onStart(ServiceInstance service) async {
 
         flutterLocalNotificationsPlugin.show(
           888,
-          "women safety app",
+          "GoSecure",
           "shake feature enable",
           NotificationDetails(
               android: AndroidNotificationDetails(
-            "script academy",
-            "foregrounf service",
+            "GoSecure",
+            "foreground service",
             "used for imp notifcation",
             icon: 'ic_bg_service_small',
             ongoing: true,

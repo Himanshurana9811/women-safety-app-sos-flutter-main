@@ -1,36 +1,26 @@
 {
   "project_info": {
-    "project_number": "470575103211",
-    "project_id": "women-safety-sos-fa61a",
-    "storage_bucket": "women-safety-sos-fa61a.appspot.com"
+    "project_number": "1047576151385",
+    "project_id": "security-68070",
+    "storage_bucket": "security-68070.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:470575103211:android:28b57a727e41d29a4d12ae",
+        "mobilesdk_app_id": "1:1047576151385:android:90b131bf69e463f5877848",
         "android_client_info": {
-          "package_name": "com.example.women_safety_app"
+          "package_name": "com.example.go_secure_safe"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "470575103211-mrmp8vmv6p2qnvbpfjaqtb5petfcg22l.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCYNiIwoF8Rmm3T7xRPl9lRc9APUCTx3Rk"
+          "current_key": "AIzaSyBSElnVkFOiDToUQRKta0EedxLmAQvakKc"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "470575103211-mrmp8vmv6p2qnvbpfjaqtb5petfcg22l.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

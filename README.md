@@ -1,4 +1,4 @@
-# women_safety_app
+# go_secure_safe
 
 A new Flutter project.
 

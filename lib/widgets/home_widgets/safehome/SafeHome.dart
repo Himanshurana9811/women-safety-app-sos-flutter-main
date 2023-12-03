@@ -4,8 +4,8 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:women_safety_app/db/db_services.dart';
-import 'package:women_safety_app/model/contactsm.dart';
+import 'package:go_secure_safe/db/db_services.dart';
+import 'package:go_secure_safe/model/contactsm.dart';
 
 class SafeHome extends StatefulWidget {
   @override
@@ -65,6 +65,7 @@ class _SafeHomeState extends State<SafeHome> {
             desiredAccuracy: LocationAccuracy.high,
             forceAndroidLocationManager: true)
         .then((Position position) {
+      print("-----$_curentPosition----");
       setState(() {
         _curentPosition = position;
         print(_curentPosition!.latitude);
@@ -109,7 +110,7 @@ class _SafeHomeState extends State<SafeHome> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "SEND YOUR CUURENT LOCATION IMMEDIATELY TO YOU EMERGENCY CONTACTS",
+                  "SEND YOUR CUURENT LOCATION IMMEDIATELY TO YOU EMERGENCY CONTACTS $_curentPosition",
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 20),
                 ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:women_safety_app/widgets/home_widgets/emergencies/policeemergency.dart';
-
+import 'package:go_secure_safe/widgets/home_widgets/emergencies/policeemergency.dart';
 import 'emergencies/AmbulanceEmergency.dart';
 
 class Emergency extends StatelessWidget {

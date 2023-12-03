@@ -1,5 +1,5 @@
 import 'package:sqflite/sqflite.dart';
-import 'package:women_safety_app/model/contactsm.dart';
+import 'package:go_secure_safe/model/contactsm.dart';
 
 class DatabaseHelper {
   String contactTable = 'contact_table';
