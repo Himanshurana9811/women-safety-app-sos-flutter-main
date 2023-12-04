@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:go_secure_safe/child/bottom_screens/add_contacts.dart';
 import 'package:go_secure_safe/child/bottom_screens/child_home_page.dart';
 
-
 class BottomPage extends StatefulWidget {
   BottomPage({Key? key}) : super(key: key);
 
@@ -15,7 +14,6 @@ class _BottomPageState extends State<BottomPage> {
   List<Widget> pages = [
     HomeScreen(),
     AddContactsPage(),
-
   ];
   onTapped(int index) {
     setState(() {

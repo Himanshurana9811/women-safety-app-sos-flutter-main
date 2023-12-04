@@ -23,9 +23,9 @@ class _SafeHomeState extends State<SafeHome> {
         phoneNumber: phoneNumber, message: message, simSlot: 1);
     if (result == SmsStatus.sent) {
       print("Sent");
-      Fluttertoast.showToast(msg: "send");
+      Fluttertoast.showToast(msg: "Send");
     } else {
-      Fluttertoast.showToast(msg: "failed");
+      Fluttertoast.showToast(msg: "Failed");
     }
   }
 
@@ -62,9 +62,8 @@ class _SafeHomeState extends State<SafeHome> {
     final hasPermission = await _handleLocationPermission();
     if (!hasPermission) return;
     await Geolocator.getCurrentPosition(
-            desiredAccuracy: LocationAccuracy.high,
-            forceAndroidLocationManager: true)
-        .then((Position position) {
+      desiredAccuracy: LocationAccuracy.high,
+    ).then((Position position) {
       print("-----$_curentPosition----");
       setState(() {
         _curentPosition = position;
@@ -110,7 +109,7 @@ class _SafeHomeState extends State<SafeHome> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "SEND YOUR CUURENT LOCATION IMMEDIATELY TO YOU EMERGENCY CONTACTS $_curentPosition",
+                  "SEND YOUR CURRENT LOCATION IMMEDIATELY TO YOU EMERGENCY CONTACTS $_curentPosition",
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 20),
                 ),
@@ -131,7 +130,7 @@ class _SafeHomeState extends State<SafeHome> {
                       print(contactList.length);
                       if (contactList.isEmpty) {
                         Fluttertoast.showToast(
-                            msg: "emergency contact is empty");
+                            msg: "Emergency contact is empty");
                       } else {
                         String messageBody =
                             "https://www.google.com/maps/search/?api=1&query=${_curentPosition!.latitude}%2C${_curentPosition!.longitude}. $_curentAddress";
@@ -139,10 +138,10 @@ class _SafeHomeState extends State<SafeHome> {
                         if (await _isPermissionGranted()) {
                           contactList.forEach((element) {
                             _sendSms("${element.number}",
-                                "i am in trouble $messageBody");
+                                "Help!! \nI am in trouble $messageBody");
                           });
                         } else {
-                          Fluttertoast.showToast(msg: "something wrong");
+                          Fluttertoast.showToast(msg: "Something wrong");
                         }
                       }
                     }),

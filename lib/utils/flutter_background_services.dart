@@ -16,13 +16,13 @@ import 'package:go_secure_safe/model/contactsm.dart';
 sendMessage(String messageBody) async {
   List<TContact> contactList = await DatabaseHelper().getContactList();
   if (contactList.isEmpty) {
-    Fluttertoast.showToast(msg: "no number exist please add a number");
+    Fluttertoast.showToast(msg: "No number exist please add a number");
   } else {
     for (var i = 0; i < contactList.length; i++) {
       Telephony.backgroundInstance
           .sendSms(to: contactList[i].number, message: messageBody)
           .then((value) {
-        Fluttertoast.showToast(msg: "message send");
+        Fluttertoast.showToast(msg: "Message send");
       });
     }
   }
@@ -32,8 +32,8 @@ Future<void> initializeService() async {
   final service = FlutterBackgroundService();
   AndroidNotificationChannel channel = AndroidNotificationChannel(
     "GoSecure",
-    "foreground service",
-    "used for imp notifcation",
+    "Foreground service",
+    "Used for imp notifcation",
     importance: Importance.high,
   );
   final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
@@ -51,8 +51,8 @@ Future<void> initializeService() async {
         isForegroundMode: true,
         autoStart: true,
         notificationChannelId: "GoSecure",
-        initialNotificationTitle: "foreground service",
-        initialNotificationContent: "initializing",
+        initialNotificationTitle: "Foreground service",
+        initialNotificationContent: "Initializing",
         foregroundServiceNotificationId: 888,
       ));
   service.startService();
@@ -92,11 +92,14 @@ void onStart(ServiceInstance service) async {
         });
 
         ShakeDetector.autoStart(
-            shakeThresholdGravity: 7,
+            shakeThresholdGravity: 3,
             shakeSlopTimeMS: 500,
             shakeCountResetTime: 3000,
-            minimumShakeCount: 1,
+            minimumShakeCount: 3,
             onPhoneShake: () async {
+              print("shake hua");
+              String messageBody =
+                  "Help!!\n I am in Trouble https://www.google.com/maps/search/?api=1&query=${_curentPosition!.latitude}%2C${_curentPosition!.longitude}";
               if (await Vibration.hasVibrator() ?? false) {
                 print("Test 2");
                 if (await Vibration.hasCustomVibrationsSupport() ?? false) {
@@ -105,28 +108,23 @@ void onStart(ServiceInstance service) async {
                 } else {
                   print("Test 4");
                   Vibration.vibrate();
-                  await Future.delayed(Duration(milliseconds: 500));
+                  await Future.delayed(Duration(milliseconds: 1000));
                   Vibration.vibrate();
                 }
                 print("Test 5");
               }
-              String messageBody =
-                  "https://www.google.com/maps/search/?api=1&query=${_curentPosition!.latitude}%2C${_curentPosition!.longitude}";
+              await Future.delayed(Duration(milliseconds: 1000));
               sendMessage(messageBody);
             });
-
+        print("1");
         flutterLocalNotificationsPlugin.show(
           888,
           "GoSecure",
-          "shake feature enable",
+          "Shake feature enable",
           NotificationDetails(
               android: AndroidNotificationDetails(
-            "GoSecure",
-            "foreground service",
-            "used for imp notifcation",
-            icon: 'ic_bg_service_small',
-            ongoing: true,
-          )),
+                  "GoSecure", "Foreground service", "Used for imp notifcation",
+                  icon: 'ic_bg_service_small', onlyAlertOnce: true)),
         );
       }
     }

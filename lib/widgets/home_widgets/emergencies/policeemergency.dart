@@ -16,7 +16,7 @@ class PoliceEmergency extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         child: InkWell(
-          onTap: () => _callNumber('8851532258'),
+          onTap: () => _callNumber('9811489140'),
           child: Container(
             height: 180,
             width: MediaQuery.of(context).size.width * 0.7,
