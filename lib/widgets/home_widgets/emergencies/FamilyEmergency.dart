@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
-
+import 'package:go_secure_safe/db/db_services.dart';
+import 'package:go_secure_safe/model/contactsm.dart';
 
 class FamilyEmergency extends StatelessWidget {
   _callNumber(String number) async {
     await FlutterPhoneDirectCaller.callNumber(number);
   }
 
- 
+  familyContact() async {
+    List<TContact> contactList = await DatabaseHelper().getContactList();
+    _callNumber(contactList[0].number);
+  }
+
   @override
   Widget build(BuildContext context) {
-   
     return Padding(
       padding: const EdgeInsets.only(left: 10.0, bottom: 5),
       child: Card(
@@ -19,7 +23,7 @@ class FamilyEmergency extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         child: InkWell(
-          onTap: () => _callNumber('9811489140'),
+          onTap: () => familyContact(),
           child: Container(
             height: 180,
             width: MediaQuery.of(context).size.width * 0.7,
