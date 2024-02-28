@@ -5,11 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:go_secure_safe/widgets/home_widgets/custom_appBar.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shake/shake.dart';
 import 'package:telephony/telephony.dart';
 import 'package:go_secure_safe/db/db_services.dart';
 import 'package:go_secure_safe/model/contactsm.dart';
+import 'package:go_secure_safe/widgets/home_widgets/CustomCarouel.dart';
 import 'package:go_secure_safe/widgets/home_widgets/emergency.dart';
 import 'package:go_secure_safe/widgets/home_widgets/safehome/SafeHome.dart';
 import 'package:go_secure_safe/widgets/live_safe.dart';
@@ -150,19 +152,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Colors.grey.shade100,
                 ),
               ),
-              // SizedBox(height: 5),
-              // CustomAppBar(
-              //     quoteIndex: qIndex,
-              //     onTap: () {
-              //       getRandomQuote();
-              //     }),
-              // SizedBox(height: 5),
-              // SizedBox(
-              //   height: 10,
-              //   child: Container(
-              //     color: Colors.grey.shade100,
-              //   ),
-              // ),
+              SizedBox(height: 5),
+              CustomAppBar(
+                  quoteIndex: qIndex,
+                  onTap: () {
+                    getRandomQuote();
+                  }),
+              SizedBox(height: 5),
+              SizedBox(
+                height: 10,
+                child: Container(
+                  color: Colors.grey.shade100,
+                ),
+              ),
               Expanded(
                 child: ListView(
                   shrinkWrap: true,
@@ -180,20 +182,20 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     Emergency(),
-                    // SizedBox(height: 10),
-                    // Align(
-                    //   alignment: Alignment.center,
-                    //   child: Padding(
-                    //     padding: const EdgeInsets.all(8.0),
-                    //     child: Text(
-                    //       "Explore your power",
-                    //       style: TextStyle(
-                    //           fontSize: 20, fontWeight: FontWeight.bold),
-                    //     ),
-                    //   ),
-                    // ),
-                    // SizedBox(height: 10),
-                    // CustomCarouel(),
+                    SizedBox(height: 10),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "Explore your power",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    CustomCarouel(),
                     SizedBox(height: 2),
                     Align(
                       alignment: Alignment.center,

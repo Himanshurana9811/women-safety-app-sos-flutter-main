@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_secure_safe/widgets/home_widgets/emergencies/familyEmergency.dart';
 import 'package:go_secure_safe/widgets/home_widgets/emergencies/policeemergency.dart';
 import 'emergencies/AmbulanceEmergency.dart';
 
@@ -9,13 +10,14 @@ class Emergency extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 400,
+      height: 600,
       child: ListView(
         physics: BouncingScrollPhysics(),
         scrollDirection: Axis.vertical,
         children: [
           PoliceEmergency(),
           AmbulanceEmergency(),
+          FamilyEmergency(),
         ],
       ),
     );
