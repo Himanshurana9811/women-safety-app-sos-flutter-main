@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:go_secure_safe/db/share_pref.dart';
-// import 'package:go_secure_safe/child/bottom_screens/child_home_page.dart';
-import 'package:go_secure_safe/utils/constants.dart';
-import 'package:go_secure_safe/utils/flutter_background_services.dart';
+import 'package:SafeGuard/db/share_pref.dart';
+// import 'package:SafeGuard/child/bottom_screens/child_home_page.dart';
+import 'package:SafeGuard/utils/constants.dart';
+import 'package:SafeGuard/utils/flutter_background_services.dart';
 import 'child/bottom_page.dart';
 
 final navigatorkey = GlobalKey<ScaffoldMessengerState>();
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'GoSecure',
+        title: 'SafeGuard',
         // scaffoldMessengerKey: navigatorkey,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(

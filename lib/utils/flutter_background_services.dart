@@ -10,8 +10,8 @@ import 'package:geolocator/geolocator.dart';
 import 'package:shake/shake.dart';
 import 'package:telephony/telephony.dart';
 import 'package:vibration/vibration.dart';
-import 'package:go_secure_safe/db/db_services.dart';
-import 'package:go_secure_safe/model/contactsm.dart';
+import 'package:SafeGuard/db/db_services.dart';
+import 'package:SafeGuard/model/contactsm.dart';
 
 sendMessage(String messageBody) async {
   List<TContact> contactList = await DatabaseHelper().getContactList();
@@ -31,7 +31,7 @@ sendMessage(String messageBody) async {
 Future<void> initializeService() async {
   final service = FlutterBackgroundService();
   AndroidNotificationChannel channel = AndroidNotificationChannel(
-    "GoSecure",
+    "SafeGuard",
     "Foreground service",
     "Used for imp notifcation",
     importance: Importance.high,
@@ -50,7 +50,7 @@ Future<void> initializeService() async {
         onStart: onStart,
         isForegroundMode: true,
         autoStart: true,
-        notificationChannelId: "GoSecure",
+        notificationChannelId: "SafeGuard",
         initialNotificationTitle: "Foreground service",
         initialNotificationContent: "Initializing",
         foregroundServiceNotificationId: 888,
@@ -119,11 +119,11 @@ void onStart(ServiceInstance service) async {
         print("1");
         flutterLocalNotificationsPlugin.show(
           888,
-          "GoSecure",
+          "SafeGuard",
           "Shake feature enable",
           NotificationDetails(
               android: AndroidNotificationDetails(
-                  "GoSecure", "Foreground service", "Used for imp notifcation",
+                  "SafeGuard", "Foreground service", "Used for imp notifcation",
                   icon: 'ic_bg_service_small', onlyAlertOnce: true)),
         );
       }

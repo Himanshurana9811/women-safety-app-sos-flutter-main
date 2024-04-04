@@ -1,4 +1,4 @@
-package com.example.go_secure_safe
+package com.example.SafeGuard
 
 import io.flutter.embedding.android.FlutterActivity
 

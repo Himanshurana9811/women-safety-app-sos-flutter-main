@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:go_secure_safe/widgets/home_widgets/emergencies/familyEmergency.dart';
-import 'package:go_secure_safe/widgets/home_widgets/emergencies/policeemergency.dart';
+import 'package:SafeGuard/widgets/home_widgets/emergencies/familyEmergency.dart';
+import 'package:SafeGuard/widgets/home_widgets/emergencies/policeemergency.dart';
 import 'emergencies/AmbulanceEmergency.dart';
 
 class Emergency extends StatelessWidget {

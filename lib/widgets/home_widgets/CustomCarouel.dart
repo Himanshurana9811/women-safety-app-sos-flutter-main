@@ -1,8 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:go_secure_safe/utils/quotes.dart';
-import 'package:go_secure_safe/widgets/home_widgets/safewebview.dart';
+import 'package:SafeGuard/utils/quotes.dart';
+import 'package:SafeGuard/widgets/home_widgets/safewebview.dart';
 
 class CustomCarouel extends StatelessWidget {
   const CustomCarouel({Key? key}) : super(key: key);

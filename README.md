@@ -1,4 +1,4 @@
-# go_secure_safe
+# SafeGuard
 
 A new Flutter project.
 

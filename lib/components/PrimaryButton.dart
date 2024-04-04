@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_secure_safe/utils/constants.dart';
+import 'package:SafeGuard/utils/constants.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String title;

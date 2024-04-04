@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:go_secure_safe/utils/quotes.dart';
+import 'package:SafeGuard/utils/quotes.dart';
 
 class CustomAppBar extends StatelessWidget {
   // const CustomAppBar({super.key});

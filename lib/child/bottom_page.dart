@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:go_secure_safe/child/bottom_screens/add_contacts.dart';
-import 'package:go_secure_safe/child/bottom_screens/child_home_page.dart';
+import 'package:SafeGuard/child/bottom_screens/add_contacts.dart';
+import 'package:SafeGuard/child/bottom_screens/child_home_page.dart';
 
 class BottomPage extends StatefulWidget {
   BottomPage({Key? key}) : super(key: key);

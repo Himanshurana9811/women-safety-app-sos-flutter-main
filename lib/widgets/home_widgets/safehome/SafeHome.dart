@@ -4,8 +4,8 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:go_secure_safe/db/db_services.dart';
-import 'package:go_secure_safe/model/contactsm.dart';
+import 'package:SafeGuard/db/db_services.dart';
+import 'package:SafeGuard/model/contactsm.dart';
 
 class SafeHome extends StatefulWidget {
   @override

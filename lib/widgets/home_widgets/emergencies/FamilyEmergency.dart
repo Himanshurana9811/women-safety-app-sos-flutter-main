@@ -1,7 +1,7 @@
 // import 'package:flutter/material.dart';
 // import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
-// import 'package:go_secure_safe/db/db_services.dart';
-// import 'package:go_secure_safe/model/contactsm.dart';
+// import 'package:SafeGuard/db/db_services.dart';
+// import 'package:SafeGuard/model/contactsm.dart';
 
 // class FamilyEmergency extends StatelessWidget {
 //   _callNumber(String number) async {
@@ -111,8 +111,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
-import 'package:go_secure_safe/db/db_services.dart';
-import 'package:go_secure_safe/model/contactsm.dart'; // Assuming you have a database helper class
+import 'package:SafeGuard/db/db_services.dart';
+import 'package:SafeGuard/model/contactsm.dart'; // Assuming you have a database helper class
 
 class Emergency extends StatelessWidget {
   @override

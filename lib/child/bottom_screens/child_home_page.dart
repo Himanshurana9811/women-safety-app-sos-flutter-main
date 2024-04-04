@@ -5,16 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:go_secure_safe/widgets/home_widgets/custom_appBar.dart';
+import 'package:SafeGuard/widgets/home_widgets/custom_appBar.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shake/shake.dart';
 import 'package:telephony/telephony.dart';
-import 'package:go_secure_safe/db/db_services.dart';
-import 'package:go_secure_safe/model/contactsm.dart';
-import 'package:go_secure_safe/widgets/home_widgets/CustomCarouel.dart';
-import 'package:go_secure_safe/widgets/home_widgets/emergency.dart';
-import 'package:go_secure_safe/widgets/home_widgets/safehome/SafeHome.dart';
-import 'package:go_secure_safe/widgets/live_safe.dart';
+import 'package:SafeGuard/db/db_services.dart';
+import 'package:SafeGuard/model/contactsm.dart';
+import 'package:SafeGuard/widgets/home_widgets/CustomCarouel.dart';
+import 'package:SafeGuard/widgets/home_widgets/emergency.dart';
+import 'package:SafeGuard/widgets/home_widgets/safehome/SafeHome.dart';
+import 'package:SafeGuard/widgets/live_safe.dart';
 
 class HomeScreen extends StatefulWidget {
   @override

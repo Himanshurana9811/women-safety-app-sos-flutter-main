@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:go_secure_safe/child/bottom_screens/contacts_page.dart';
-import 'package:go_secure_safe/components/PrimaryButton.dart';
-import 'package:go_secure_safe/db/db_services.dart';
-import 'package:go_secure_safe/model/contactsm.dart';
+import 'package:SafeGuard/child/bottom_screens/contacts_page.dart';
+import 'package:SafeGuard/components/PrimaryButton.dart';
+import 'package:SafeGuard/db/db_services.dart';
+import 'package:SafeGuard/model/contactsm.dart';
 
 class AddContactsPage extends StatefulWidget {
   const AddContactsPage({super.key});

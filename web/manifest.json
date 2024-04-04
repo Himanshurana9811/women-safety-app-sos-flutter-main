@@ -1,6 +1,6 @@
 {
-    "name": "go_secure_safe",
-    "short_name": "go_secure_safe",
+    "name": "SafeGuard",
+    "short_name": "SafeGuard",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
